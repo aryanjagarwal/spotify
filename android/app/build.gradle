@@ -51,6 +51,12 @@ react {
     // hermesFlags = ["-O", "-output-source-map"]
 
     /* Autolinking */
+
+    project.ext.vectoricons = [
+        iconFontNames: [ 'MaterialCommunityIcons.ttf', 'MaterialIcons.ttf', 'Ionicons.ttf' ] // Name of the font files you want to copy
+    ]
+    apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
     autolinkLibrariesWithApp()
 }
 
